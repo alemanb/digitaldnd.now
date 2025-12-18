@@ -41,16 +41,16 @@ export const CharacterSheet: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-2 sm:p-4 md:p-6">
-      <Card className="w-full max-w-5xl shadow-2xl animate-in fade-in duration-500">
+      <Card className="w-full max-w-5xl shadow-2xl animate-in fade-in duration-500 py-0 pb-6">
         <CharacterSheetHeader />
 
         <Tabs defaultValue="basic-info" className="w-full">
-          <TabsList className="grid w-full grid-cols-7 rounded-none border-b">
+          <TabsList className="grid w-full grid-cols-7 rounded-none border-b bg-transparent p-0 h-auto">
             {tabs.map((tab) => (
               <TabsTrigger
                 key={tab.id}
                 value={tab.id}
-                className="rounded-none data-[state=active]:border-b-2 data-[state=active]:border-primary transition-all duration-200 hover:bg-muted/50 text-xs sm:text-sm whitespace-nowrap px-2 sm:px-4"
+                className="relative rounded-none border-0 bg-transparent px-2 sm:px-4 py-3 text-xs sm:text-sm font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:bg-muted/30 data-[state=active]:bg-muted/80 data-[state=active]:text-foreground data-[state=active]:shadow-none after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 after:scale-x-0 data-[state=active]:after:scale-x-100"
               >
                 {tab.label}
               </TabsTrigger>
